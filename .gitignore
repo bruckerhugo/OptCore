@@ -1,0 +1,35 @@
+# Project environment and Python build artifacts
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tool caches and reports
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+junit.xml
+site/
+AGENTS.md
+
+# Generated benchmark output; keep inputs and scripts versioned
+benchmarks/results/
+benchmarks/.cache/
+
+# Local configuration and temporary files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.swo
+*~

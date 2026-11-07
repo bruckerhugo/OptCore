@@ -1,0 +1,121 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "OptCore: Sync environment",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "sync"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Run tests",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "pytest"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "OptCore: Lint",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "check",
+                "."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Check formatting",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "format",
+                "--check",
+                "."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Format",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "ruff",
+                "format",
+                "."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Build package",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Build documentation",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "mkdocs",
+                "build",
+                "--strict"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OptCore: Serve documentation",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "mkdocs",
+                "serve"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
